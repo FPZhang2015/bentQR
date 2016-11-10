@@ -59,7 +59,7 @@ bentQRsimdat <- function(n, bet0, t0, tau, modtype, etype){
   }else if(etype ==2){
     e <- rt(n, 3) - qt(tau, 3)            # t_3 distribution
   }else if(etype ==3){
-    e <- 0.9*rnorm(n, 0, 1) + 0.1*rt(tau, 3) -
+    e <- 0.9*rnorm(n, 0, 1) + 0.1*rt(n, 3) -
       (0.9*qnorm(tau, 0, 1) + 0.1*qt(tau, 3))    ## mixture 0.9*N(0,1) + 0.1 t_3
   }else if(etype ==4){
     e <- rcauchy(n, 0, 1) - qcauchy(tau, 0, 1)   ## Cauchy distribution

@@ -1,0 +1,16 @@
+Package: bentQR
+Type: Package
+Title: Estimating the bent line quantile regression
+Version: 1.1.0
+Authors@R: c(
+    person("Feipeng", "Zhang", email = "zhangfp108@gmail.com", role =  c("aut", "cre")),
+    person("Yanyang", "Yan",  role = "aut"),
+    person("Xiaoying", "Zhou", role = "aut")
+    )
+Maintainer: Feipeng Zhang <zhangfp108@gmail.com>
+Description: Estimation and inference methods for the bent line quantile regression model.
+License: GPL (>= 2.0)
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Depends: R (>= 3.1.0), quantreg
+

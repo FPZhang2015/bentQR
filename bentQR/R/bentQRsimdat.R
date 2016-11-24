@@ -17,7 +17,7 @@
 #'   etype = 1 for N(0,1),
 #'   etype = 2 for t_3, 
 #'   etype = 3 for 0.9N(0,1) + 0.1t_3, 
-#'   etype = 4 for Cauchy(0,1). 
+#'   etype = 4 for 0.9N(0,1) + 0.1Cauchy(0,1). 
 
 #' @return A matrix with the elements
 #' \item{y}{The response variable.}
@@ -62,7 +62,8 @@ bentQRsimdat <- function(n, bet0, t0, tau, modtype, etype){
     e <- 0.9*rnorm(n, 0, 1) + 0.1*rt(n, 3) -
       (0.9*qnorm(tau, 0, 1) + 0.1*qt(tau, 3))    ## mixture 0.9*N(0,1) + 0.1 t_3
   }else if(etype ==4){
-    e <- rcauchy(n, 0, 1) - qcauchy(tau, 0, 1)   ## Cauchy distribution
+    e <- 0.9*rnorm(n, 0, 1) + 0.1*rcauchy(n, 0, 1) - 
+      (0.9*qnorm(tau, 0, 1) + 0.1*qcauchy(tau, 0, 1))   ## Cauchy distribution
   }
   
   if (modtype == 1){## iid  case

@@ -23,7 +23,7 @@ modetype = 2, heteroscedasticity case}
 etype = 1 for N(0,1),
 etype = 2 for t_3, 
 etype = 3 for 0.9N(0,1) + 0.1t_3, 
-etype = 4 for Cauchy(0,1).}
+etype = 4 for 0.9N(0,1) + 0.1Cauchy(0,1).}
 }
 \value{
 A matrix with the elements
